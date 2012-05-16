@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e9f9a892887b0b4eb170360e75922ca
+guid: ac138f948d1aa544fa75ae91a489c017
 ModelImporter:
   fileIDToRecycleName:
     4300000: chest_base
@@ -52,19 +52,6 @@ ModelImporter:
     chest_base:
       data:
         first: 1
-        second: a2860100
-      data:
-        first: 4
-        second: 821a0600
-      data:
-        first: 23
-        second: 60182300
-      data:
-        first: 33
-        second: a05a3200
-    chest_base01:
-      data:
-        first: 1
         second: a4860100
       data:
         first: 4
@@ -75,3 +62,16 @@ ModelImporter:
       data:
         first: 33
         second: a25a3200
+    chest_base01:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
+        first: 23
+        second: 60182300
+      data:
+        first: 33
+        second: a05a3200

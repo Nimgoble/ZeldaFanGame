@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 4e9f9a892887b0b4eb170360e75922ca
+guid: 7fd48dcb6f5267a409aa51c569986a20
 ModelImporter:
   fileIDToRecycleName:
-    4300000: chest_base
-    4300002: chest_base01
-    7400000: Take 001 //// Chest02
+    4300000: Box01
+    4300002: Box02
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -42,27 +41,27 @@ ModelImporter:
     //RootNode:
       data:
         first: 1
-        second: a0860100
-      data:
-        first: 4
-        second: 801a0600
-      data:
-        first: 111
-        second: 605fa900
-    chest_base:
-      data:
-        first: 1
         second: a2860100
       data:
         first: 4
         second: 821a0600
+      data:
+        first: 111
+        second: 605fa900
+    Box01:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
       data:
         first: 23
         second: 60182300
       data:
         first: 33
         second: a05a3200
-    chest_base01:
+    Box02:
       data:
         first: 1
         second: a4860100
