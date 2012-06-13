@@ -90,6 +90,13 @@ private var lastGroundedTime = 0.0;
 
 private var isControllable = true;
 
+private var cameraTransform : Transform;
+
+public function SetCamera(cam : Transform)
+{
+	cameraTransform = cam;
+}
+
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
@@ -126,7 +133,7 @@ public var jumpPoseAnimation : AnimationClip;
 
 function UpdateSmoothedMovementDirection ()
 {
-	var cameraTransform = Camera.main.transform;
+	//var cameraTransform = ourCamera;
 	var grounded = IsGrounded();
 	
 	// Forward vector relative to the camera along the x-z plane	
@@ -190,7 +197,7 @@ function UpdateSmoothedMovementDirection ()
 		_characterState = CharacterState.Idle;
 		
 		// Pick speed modifier
-		if (Input.GetKey (KeyCode.LeftShift) | Input.GetKey (KeyCode.RightShift))
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
 		{
 			targetSpeed *= runSpeed;
 			_characterState = CharacterState.Running;
@@ -221,10 +228,7 @@ function UpdateSmoothedMovementDirection ()
 
 		if (isMoving)
 			inAirVelocity += targetDirection.normalized * Time.deltaTime * inAirControlAcceleration;
-	}
-	
-
-		
+	}	
 }
 
 
@@ -359,9 +363,7 @@ function Update() {
 	// Set rotation to the move direction
 	if (IsGrounded())
 	{
-		
-		transform.rotation = Quaternion.LookRotation(moveDirection);
-			
+		transform.rotation = Quaternion.LookRotation(moveDirection);	
 	}	
 	else
 	{
