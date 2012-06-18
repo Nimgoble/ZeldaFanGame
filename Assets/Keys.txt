@@ -1,0 +1,15 @@
+keys:
+
+ctrl = shield
+mouse1 = attack (hold for spin attack)
+mouse2 = camera adjust
+wasd = movement
+shift = run
+1,2,3,4 = quick action slots
+e = (action)
+tab = inventory
+esc = pause/menu
+spacebar =  roll
+hold ctrl + tap spacebar = dodge
+*When shield is out, lock camera behind player
+**make camera zoom in a bit

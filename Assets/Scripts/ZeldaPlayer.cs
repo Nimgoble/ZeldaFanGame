@@ -12,6 +12,7 @@ public class ZeldaPlayer : MonoBehaviour
 	private Vector3 fairyOffset = new Vector3(-1.0f, 1.5f, -1.0f);
 	public GameObject ourCamera = null;
 	private Texture2D [] heartTextures;
+	private Texture2D heartFrame;
 	private uint health = 12;
 	private uint maxHealth = 12;
 	private uint keys = 0;
@@ -44,10 +45,51 @@ public class ZeldaPlayer : MonoBehaviour
 			(Texture2D)Resources.Load("Heart3", typeof(Texture2D)),
 			(Texture2D)Resources.Load("Heart4", typeof(Texture2D))
 		};
+		heartFrame = (Texture2D)Resources.Load("HeartFrame", typeof(Texture2D));
+		//heartFrame.Resize(200, 200);
 	}
 	
 	// Update is called once per frame
 	void Update () 
+	{
+		CheckCommands();
+	}
+	
+	void OnGUI()
+	{
+		DrawHUD ();
+		//DrawMagic
+		//DrawEtc
+	}
+	
+	private void DrawHUD()
+	{
+		//Hearts.  This is going to go, soon.
+		/*uint wholeHearts = health / 4;
+		uint partialHeart = health % 4;
+		Rect place = new Rect(15, 15, 32, 32);
+		for(int i = 0; i < wholeHearts; i++)
+		{
+			place.x += 33;
+			GUI.DrawTexture(place, heartTextures[3]);
+		}
+		if( partialHeart > 0 )
+		{
+			place.x += 33;
+			GUI.DrawTexture(place, heartTextures[partialHeart - 1]);
+		}*/
+		
+		GUI.DrawTexture(new Rect(0, Screen.height - heartFrame.height, heartFrame.width, heartFrame.height), heartFrame);
+		
+		//Item Buttons
+		int middle = Screen.width / 2;
+		GUI.Button(new Rect(middle - 100, Screen.height - 50, 50, 50), "1"); 
+		GUI.Button(new Rect(middle - 50, Screen.height - 50, 50, 50), "2");
+		GUI.Button(new Rect(middle, Screen.height - 50, 50, 50), "3");
+		GUI.Button(new Rect(middle + 50, Screen.height - 50, 50, 50), "4");
+	}
+	
+	private void CheckCommands()
 	{
 		if(Input.GetKeyDown(KeyCode.E))
 		{
@@ -72,30 +114,6 @@ public class ZeldaPlayer : MonoBehaviour
 						chest.Open();
 				}
 			}
-		}
-	}
-	
-	void OnGUI()
-	{
-		DrawHealth ();
-		//DrawMagic
-		//DrawEtc
-	}
-	
-	private void DrawHealth()
-	{
-		uint wholeHearts = health / 4;
-		uint partialHeart = health % 4;
-		Rect place = new Rect(15, 15, 32, 32);
-		for(int i = 0; i < wholeHearts; i++)
-		{
-			place.x += 33;
-			GUI.DrawTexture(place, heartTextures[3]);
-		}
-		if( partialHeart > 0 )
-		{
-			place.x += 33;
-			GUI.DrawTexture(place, heartTextures[partialHeart - 1]);
 		}
 	}
 }
