@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-guid: 2b82a1c22baacad47bee8ead5e0c6864
+guid: 267ce21527fd0e94fa212f9fb89e89f5
 ModelImporter:
   fileIDToRecycleName:
-    4300000: LinkWaker
-    4300002: LinkWaker_sword
-    4300004: Hero_shield
-    4300006: LinkWaker_hat
-    4300008: Link
+    4300000: Link
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -21,7 +17,17 @@ ModelImporter:
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
-    clipAnimations: []
+    clipAnimations:
+    - name: idle
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      loop: 0
+    - name: Walk
+      firstFrame: 15
+      lastFrame: 30
+      wrapMode: 0
+      loop: 0
   meshes:
     lODScreenPercentages: []
     globalScale: .00999999978
