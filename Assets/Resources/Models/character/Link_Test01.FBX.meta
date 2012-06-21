@@ -26,7 +26,7 @@ ModelImporter:
       wrapMode: 0
       loop: 0
     - name: Walk
-      firstFrame: 15
+      firstFrame: 20
       lastFrame: 30
       wrapMode: 0
       loop: 0
@@ -59,6 +59,13 @@ ModelImporter:
       data:
         first: 111
         second: 605fa900
+    Bip02 Footsteps:
+      data:
+        first: 1
+        second: 04870100
+      data:
+        first: 4
+        second: e41a0600
     Bip02 Head:
       data:
         first: 1
