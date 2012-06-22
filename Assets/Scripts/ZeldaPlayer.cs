@@ -46,7 +46,6 @@ public class ZeldaPlayer : MonoBehaviour
 			(Texture2D)Resources.Load("Heart4", typeof(Texture2D))
 		};
 		heartFrame = (Texture2D)Resources.Load("HeartFrame", typeof(Texture2D));
-		//heartFrame.Resize(200, 200);
 	}
 	
 	// Update is called once per frame

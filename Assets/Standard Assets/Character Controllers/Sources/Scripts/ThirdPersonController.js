@@ -97,11 +97,13 @@ public function SetCamera(cam : Transform)
 	cameraTransform = cam;
 }
 
+public var linkModel : GameObject;
+
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
-	
-	_animation = GetComponent(Animation);
+	_animation = linkModel.animation;
+	//_animation = GetComponent(Animation);
 	if(!_animation)
 		Debug.Log("The character you would like to control doesn't have animations. Moving her might look weird.");
 	
