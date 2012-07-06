@@ -90,20 +90,11 @@ private var lastGroundedTime = 0.0;
 
 private var isControllable = true;
 
-private var cameraTransform : Transform;
-
-public function SetCamera(cam : Transform)
-{
-	cameraTransform = cam;
-}
-
-public var linkModel : GameObject;
-
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
-	_animation = linkModel.animation;
-	//_animation = GetComponent(Animation);
+	
+	_animation = GetComponent(Animation);
 	if(!_animation)
 		Debug.Log("The character you would like to control doesn't have animations. Moving her might look weird.");
 	
@@ -135,7 +126,7 @@ public var jumpPoseAnimation : AnimationClip;
 
 function UpdateSmoothedMovementDirection ()
 {
-	//var cameraTransform = ourCamera;
+	var cameraTransform = Camera.main.transform;
 	var grounded = IsGrounded();
 	
 	// Forward vector relative to the camera along the x-z plane	
@@ -230,7 +221,10 @@ function UpdateSmoothedMovementDirection ()
 
 		if (isMoving)
 			inAirVelocity += targetDirection.normalized * Time.deltaTime * inAirControlAcceleration;
-	}	
+	}
+	
+
+		
 }
 
 
@@ -365,7 +359,9 @@ function Update() {
 	// Set rotation to the move direction
 	if (IsGrounded())
 	{
-		transform.rotation = Quaternion.LookRotation(moveDirection);	
+		
+		transform.rotation = Quaternion.LookRotation(moveDirection);
+			
 	}	
 	else
 	{

@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ZeldaPlayer.cs">
     <Files>
-      <File FileName="Assets\Scripts\MainMenu.cs" Line="26" Column="29" />
-      <File FileName="Assets\Scripts\ZeldaPlayer.cs" Line="83" Column="17" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ZeldaPlayer.cs" Line="24" Column="16" />
+      <File FileName="Assets\Scripts\MainMenu.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

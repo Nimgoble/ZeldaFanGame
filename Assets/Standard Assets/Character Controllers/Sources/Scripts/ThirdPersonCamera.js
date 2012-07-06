@@ -31,31 +31,17 @@ private var snap = false;
 private var controller : ThirdPersonController;
 private var targetHeight = 100000.0; 
 
-function SetCamera(cam : Transform)
-{
-	if(cameraTransform)
-		return;
-		
-	cameraTransform = cam;
-	if(controller)
-		controller.SetCamera(cam);
-	
-	enabled = true;
-}
 function Awake ()
 {
-	_target = transform;
-	/*if(!cameraTransform)
-	{
-		cameraTransform = _target.GetComponent("Camera").transform;
-		if(!cameraTransform && Camera.main)
-			cameraTransform = Camera.main.transform;
-	}*/
+	if(!cameraTransform && Camera.main)
+		cameraTransform = Camera.main.transform;
 	if(!cameraTransform) {
 		Debug.Log("Please assign a camera to the ThirdPersonCamera script.");
 		enabled = false;	
 	}
-
+			
+		
+	_target = transform;
 	if (_target)
 	{
 		controller = _target.GetComponent(ThirdPersonController);
@@ -92,7 +78,7 @@ function AngleDistance (a : float, b : float)
 function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 {
 	// Early out if we don't have a target
-	if (!controller || !cameraTransform)
+	if (!controller)
 		return;
 	
 	var targetCenter = _target.position + centerOffset;

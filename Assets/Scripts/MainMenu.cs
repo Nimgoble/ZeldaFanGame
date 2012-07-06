@@ -6,16 +6,19 @@ public class MainMenu : MonoBehaviour
 	private const float buttonWidth = 200.0f;
 	private const float buttonHeight = 50.0f;
 	private string [] buttonTexts = {"New Game", "Load Game", "Options"};
-	// Use this for initialization
-	void Start () 
-	{
 	
+	// Use this for initialization
+	public void Start () 
+	{
+	}
+	
+	public void Stop()
+	{
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
 	}
 	
 	void OnGUI()
@@ -30,16 +33,5 @@ public class MainMenu : MonoBehaviour
 			{
 			}
 		}
-			
-		//TODO: Put in "Continue" button if there are saved games.
-		/*if(GUI.Button(new Rect(left, top, buttonWidth, buttonHeight), "New Game"))
-		{
-		}
-		if(GUI.Button(new Rect(left, 30, buttonWidth, buttonHeight), "Load Game"))
-		{
-		}
-		if(GUI.Button(new Rect(left, 50, buttonWidth, buttonHeight), "Options"))
-		{
-		}*/
 	}
 }
