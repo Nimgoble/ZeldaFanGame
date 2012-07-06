@@ -34,7 +34,7 @@ public class ZeldaPlayer : MonoBehaviour
 			ourCamera.transform.LookAt(this.transform);
 		}
 		//Setup our camera
-		ThirdPersonCamera tpCam = this.gameObject.GetComponent("ThirdPersonCamera") as ThirdPersonCamera;
+		ZeldaCamera tpCam = this.gameObject.GetComponent("ZeldaCamera") as ZeldaCamera;
 		tpCam.SetCamera(ourCamera.transform);
 		
 		//Initialize hearts

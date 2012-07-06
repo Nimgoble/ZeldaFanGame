@@ -64,7 +64,6 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\CartoonWater\Readme.txt" />
      <None Include="Assets\Keys.txt" />
-     <None Include="Assets\UnitySerializer\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
